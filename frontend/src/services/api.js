@@ -1,5 +1,15 @@
-export const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+// Define BASE_URL explicitly
+const BASE_URL = import.meta.env.VITE_API_URL || "https://warehouse-system-production-fafa.up.railway.app";
 
+// Example login fetch/axios call using BASE_URL
+export const loginUser = async (credentials) => {
+  const response = await fetch(`${BASE_URL}/api/login/`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(credentials),
+  });
+  return response.json();
+};
 async function request(endpoint, options = {}) {
   const defaultHeaders = {
     'Content-Type': 'application/json',
