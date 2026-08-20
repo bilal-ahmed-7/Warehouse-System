@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-multi-branch-warehouse-sys
 DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 't')
 
 # Allow Vercel domain and wildcard for development/production
-ALLOWED_HOSTS = ['.render.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
