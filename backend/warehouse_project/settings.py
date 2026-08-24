@@ -133,8 +133,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://your-frontend-domain.vercel.app",
-    "http://localhost:5173",  # or local frontend port
+    "https://warehouse-system-phi.vercel.app/"
 ]
 CORS_ALLOW_CREDENTIALS = True
 
